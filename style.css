@@ -1,0 +1,223 @@
+*{
+    padding:0;
+    margin: 0;
+    scroll-behavior: smooth;
+    transition: all 0.1ms;
+    box-sizing: border-box;
+}
+/* nav start  */
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 30px;
+}
+.logo{
+    font-size: 25px;
+    font-weight: bold;
+}
+.navlist{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.list-item a{
+    text-decoration: none;
+    font-weight: bold;
+
+}
+/* nav end  */
+/* about start  */
+.about {
+    display: flex;
+    padding: 40px;
+    align-items: center;
+}
+
+.left {
+    flex: 1;
+    padding: 20px;
+    /* background-color: #f4f4f4; */
+    border-radius: 10px;
+}
+
+.left h2 {
+    margin-bottom: 10px;
+}
+
+.left span {
+    font-weight: bold;
+}
+
+.left p {
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.right {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+img {
+    max-width: 100%;
+}
+
+.btn1{
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.btn2{
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.btn1 a,.btn2 a{
+    text-decoration: none;
+    color: white;
+
+}
+/* about end  */
+/* skills start  and project */
+.container1 {
+    text-align: center;
+    padding: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+h6 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+/* skills end and project  */
+
+/* responsive css */
+
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Adjust the styles for smaller screens */
+
+    .navlist {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: black;
+        padding: 30px;
+        color: white;
+        z-index: 1;
+    }
+
+    .navlist.active {
+        display: flex;
+    }
+
+    .list-item {
+        margin: 10px 0;
+        padding: 30px;
+        color: white;
+        text-align: center;
+    }
+    .list-item a{
+        color: white;
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin: 5px 0;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        padding: 20px;
+    }
+
+    .right {
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container1 {
+        padding: 20px;
+    }
+
+    .cards {
+        display: block;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}
